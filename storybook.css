@@ -1,0 +1,104 @@
+/**
+ * This file is for Storybook UI mods that can't be done directly in the theme in manager.ts
+ * The same for the docs/preview is located in ./storybook/preview-head.html.
+ * Colour-related overrides to make the UI match the selected theme should go in storybook-ui-themes.css
+ */
+
+body {
+	font-family: 'Inter Tight', sans-serif;
+}
+
+#root {
+	padding-top: 40px; /* height of the toolbar which is fixed at the top */
+}
+
+.sidebar-header {
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		img {
+			max-width: 4rem;
+		}
+
+		&:after {
+			content: 'Redback UI';
+			font-size: 1.33rem;
+			font-weight: 700;
+			margin-left: 0.5rem;
+			color: #370e4a;
+		}
+	}
+}
+
+.sidebar-container *, .sb-bar * {
+	font-family: 'Inter Tight', sans-serif;
+}
+
+.sb-bar[data-test-id="sb-preview-toolbar"] {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	> div {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		> div {
+			display: contents;
+		}
+	}
+
+	button[title*="Go full screen"] {
+		display: block;
+	}
+
+	div:has(> button[title="theme"]) {
+		display: flex;
+		align-items: center;
+	}
+
+	button[title="theme"] {
+		font-weight: 300;
+		display: flex;
+		align-items: center;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: all 0.2s;
+
+		&:focus-visible {
+			text-decoration-color: currentColor;
+		}
+
+		svg {
+			margin-right: 0.25rem;
+			order: -1;
+		}
+
+		&:before {
+			content: 'Theme:';
+			margin-right: -0.25rem;
+			font-size: 0.75rem;
+			font-weight: 700;
+		}
+
+		&:after {
+			content: '▼';
+			margin-left: 0.25rem;
+		}
+	}
+}
+
+div[data-testid="tooltip"] {
+	a[id*="list-item-"] {
+		font-family: 'Inter Tight', sans-serif !important;
+
+		&:hover, &:focus, &:active {
+			background: rgba(233, 116, 98, 0.1);
+		}
+	}
+}

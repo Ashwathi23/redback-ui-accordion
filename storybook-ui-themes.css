@@ -1,0 +1,96 @@
+/**
+ * Storybook UI (sidebar; toolbars; etc) styling overrides specific to applying a theme dynamically
+ * - ONLY FOR THINGS THAT CAN'T BE DONE IN MANAGER.TS!
+ *
+ * - The global CSS variables and data-ui-theme attribute used here are set in public/storybook-themes.js (it has to be in the public directory for Storybook to access it)
+ * - A base light and dark theme is set in manager.ts; and in storybook-themes.js we set which to use as a base for our custom themes
+ */
+
+/* Pending a reliable way to get these from the theme file; they're copied from there to here */
+:root {
+	--redback-color-primary: #e97462;
+	--redback-color-secondary: #370e4a;
+	--redback-color-subtle: #b3a7b7;
+	--redback-color-light: #f8f9fa;
+	--redback-color-dark: #0e080e;
+	--redback-color-success: #00b285;
+	--redback-color-error: #84213A;
+	--redback-color-warning: #e97462;
+	--redback-color-info: #00aeb2;
+}
+
+.sb-bar button[title="theme"] {
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	background: var(--redback-color-success);
+	color: white;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: all 0.2s;
+
+	&:hover, &:focus, &:active {
+		background: #008c6c;
+		color: white;
+	}
+}
+
+/*
+ * Overrides for all light themes
+ * (only things that can't be set in the theme in manager.ts)
+ */
+body.light {
+
+	.sidebar-item {
+		svg {
+			color: var(--redback-color-secondary);
+		}
+
+		&[data-selected="true"] {
+			background: var(--redback-color-secondary);
+
+			svg {
+				color: var(--redback-color-light);
+			}
+		}
+	}
+}
+
+/*
+ * Overrides for all dark themes
+ * (only things that can't be set in the theme in manager.ts)
+ */
+body.dark {
+
+	.sidebar-item {
+		svg {
+			color: var(--redback-color-primary);
+		}
+
+		&[data-selected="true"] {
+			background: var(--redback-color-primary);
+
+			svg {
+				color: var(--redback-color-light);
+			}
+		}
+	}
+
+	.sidebar-header {
+		a {
+			&:after {
+				color: var(--theme-color-light);
+			}
+		}
+	}
+}
+
+/**
+ * Overrides for specific Redback UI themes
+ */
+body[data-ui-theme="default"] {
+}
+
+body[data-ui-theme="smartrack"] {
+}
+

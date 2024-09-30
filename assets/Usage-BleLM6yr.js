@@ -1,0 +1,2 @@
+import{j as n}from"./jsx-runtime-CKrituN3.js";import{useMDXComponents as r}from"./index-DSz_1G2r.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";function e(o){const t={h1:"h1",p:"p",strong:"strong",...r(),...o.components};return n.jsxs(n.Fragment,{children:[n.jsx(t.h1,{id:"how-to-use-redback-ui",children:"How to use Redback UI"}),`
+`,n.jsx(t.p,{children:n.jsx(t.strong,{children:"Coming soon."})})]})}function u(o={}){const{wrapper:t}={...r(),...o.components};return t?n.jsx(t,{...o,children:n.jsx(e,{...o})}):e(o)}export{u as default};

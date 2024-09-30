@@ -1,0 +1,7 @@
+function __vite__mapDeps(indexes) {
+  if (!__vite__mapDeps.viteFileDeps) {
+    __vite__mapDeps.viteFileDeps = ["./index-DSz_1G2r.js","./index-CBqU2yxZ.js","./_commonjsHelpers-BosuxZz1.js"]
+  }
+  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
+}
+import{_ as p}from"./iframe-Ct39hXZj.js";import{R as e,r as c}from"./index-CBqU2yxZ.js";import{r as l,u}from"./react-18-3zP9X_KG.js";import{ae as h,af as E,ag as d,ah as x}from"./index-DtQP69pW.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-CbwENYX-.js";import"./polished.esm-CRxMpOkB.js";import"./hasIn-CZcrsiw3.js";import"./_getPrototype-DHgE_lbf.js";import"./index-uexYa9xf.js";import"./index-DrFu-skq.js";var _={code:h,a:E,...d},f=class extends c.Component{constructor(){super(...arguments),this.state={hasError:!1}}static getDerivedStateFromError(){return{hasError:!0}}componentDidCatch(t){let{showException:r}=this.props;r(t)}render(){let{hasError:t}=this.state,{children:r}=this.props;return t?null:e.createElement(e.Fragment,null,r)}},T=class{constructor(){this.render=async(t,r,o)=>{let n={..._,...r==null?void 0:r.components},s=x;return new Promise((m,a)=>{p(()=>import("./index-DSz_1G2r.js"),__vite__mapDeps([0,1,2]),import.meta.url).then(({MDXProvider:i})=>l(e.createElement(f,{showException:a,key:Math.random()},e.createElement(i,{components:n},e.createElement(s,{context:t,docsParameter:r}))),o)).then(()=>m())})},this.unmount=t=>{u(t)}}};export{T as DocsRenderer,_ as defaultComponents};
